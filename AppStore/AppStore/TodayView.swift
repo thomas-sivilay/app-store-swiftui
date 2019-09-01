@@ -14,10 +14,9 @@ struct TodayView: View {
         ScrollView {
             VStack {
                 header
-                Rectangle()
-                    .frame(width: 375 - 20, height: 300)
-                    .foregroundColor(Color.green)
-                    .cornerRadius(12)
+                item(color: .green)
+                item(color: .red)
+                item(color: .yellow)
             }
         }
     }
@@ -28,6 +27,7 @@ struct TodayView: View {
                 .bold()
                 .font(.footnote)
                 .foregroundColor(.gray)
+                .kerning(-0.25)
             HStack {
                 Text("Today")
                     .font(.largeTitle)
@@ -49,6 +49,13 @@ struct TodayView: View {
                                          endPoint: .bottom))
                     .frame(width: 36, height: 36, alignment: .center)
         )
+    }
+    
+    func item(color: Color) -> some View {
+        Rectangle()
+            .frame(width: 375 - 20, height: 300)
+            .foregroundColor(color)
+            .cornerRadius(12)
     }
 }
 
