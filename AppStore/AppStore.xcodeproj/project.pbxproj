@@ -13,6 +13,7 @@
 		F549989D231C72DE00971D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F549989C231C72DE00971D99 /* Assets.xcassets */; };
 		F54998A0231C72DE00971D99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F549989F231C72DE00971D99 /* Preview Assets.xcassets */; };
 		F54998A3231C72DF00971D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54998A1231C72DF00971D99 /* LaunchScreen.storyboard */; };
+		F55607C9231DC3A2006BB856 /* TodayAppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55607C8231DC3A2006BB856 /* TodayAppItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F549989F231C72DE00971D99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F54998A2231C72DF00971D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F54998A4231C72DF00971D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55607C8231DC3A2006BB856 /* TodayAppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAppItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				F5499896231C72DE00971D99 /* AppDelegate.swift */,
 				F5499898231C72DE00971D99 /* SceneDelegate.swift */,
 				F549989A231C72DE00971D99 /* TodayView.swift */,
+				F55607C8231DC3A2006BB856 /* TodayAppItem.swift */,
 				F549989C231C72DE00971D99 /* Assets.xcassets */,
 				F54998A1231C72DF00971D99 /* LaunchScreen.storyboard */,
 				F54998A4231C72DF00971D99 /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				F5499897231C72DE00971D99 /* AppDelegate.swift in Sources */,
 				F5499899231C72DE00971D99 /* SceneDelegate.swift in Sources */,
+				F55607C9231DC3A2006BB856 /* TodayAppItem.swift in Sources */,
 				F549989B231C72DE00971D99 /* TodayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

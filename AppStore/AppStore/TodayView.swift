@@ -10,9 +10,6 @@ import SwiftUI
 
 struct TodayView: View {
     
-    private enum Constant {
-        static let itemHeight: CGFloat = 320
-    }
     @State var scaled: Bool = false
     
     var body: some View {
@@ -20,12 +17,12 @@ struct TodayView: View {
             VStack {
                 header
                 if scaled {
-                    item(color: .purple)
+                    TodayAppItem(color: .purple)
                 }
                 
-                item(color: .green)
-                item(color: .red)
-                item(color: .yellow)
+                TodayAppItem(color: .green)
+                TodayAppItem(color: .red)
+                TodayAppItem(color: .yellow)
             }
             .animation(.easeInOut(duration: 0.3))
         }
@@ -59,22 +56,6 @@ struct TodayView: View {
                                          endPoint: .bottom))
                     .frame(width: 36, height: 36, alignment: .center)
         )
-    }
-    
-    func item(color: Color) -> some View {
-        GeometryReader { proxy in
-            Rectangle()
-                .cornerRadius(12)
-                .padding(.horizontal)
-                .frame(width: proxy.size.width)
-                .foregroundColor(color)
-                .onTapGesture {
-                    withAnimation() {
-                        self.scaled.toggle()
-                    }
-            }
-        }
-        .frame(height: Constant.itemHeight)
     }
 }
 
