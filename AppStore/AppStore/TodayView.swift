@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct TodayView: View {
+    
+    private enum Constant {
+        static let itemHeight: CGFloat = 320
+    }
     @State var scaled: Bool = false
     
     var body: some View {
@@ -58,15 +62,19 @@ struct TodayView: View {
     }
     
     func item(color: Color) -> some View {
-        Rectangle()
-            .frame(width: 375 - 20, height: 300)
-            .foregroundColor(color)
-            .cornerRadius(12)
-            .onTapGesture {
-                withAnimation() {
-                    self.scaled.toggle()
-                }
+        GeometryReader { proxy in
+            Rectangle()
+                .cornerRadius(12)
+                .padding(.horizontal)
+                .frame(width: proxy.size.width)
+                .foregroundColor(color)
+                .onTapGesture {
+                    withAnimation() {
+                        self.scaled.toggle()
+                    }
             }
+        }
+        .frame(height: Constant.itemHeight)
     }
 }
 
