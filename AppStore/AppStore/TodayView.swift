@@ -9,15 +9,21 @@
 import SwiftUI
 
 struct TodayView: View {
+    @State var scaled: Bool = false
     
     var body: some View {
         ScrollView {
             VStack {
                 header
+                if scaled {
+                    item(color: .purple)
+                }
+                
                 item(color: .green)
                 item(color: .red)
                 item(color: .yellow)
             }
+            .animation(.easeInOut(duration: 0.3))
         }
     }
     
@@ -56,6 +62,11 @@ struct TodayView: View {
             .frame(width: 375 - 20, height: 300)
             .foregroundColor(color)
             .cornerRadius(12)
+            .onTapGesture {
+                withAnimation() {
+                    self.scaled.toggle()
+                }
+            }
     }
 }
 
